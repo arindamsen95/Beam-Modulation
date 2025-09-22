@@ -25,7 +25,7 @@
   TString bpm[]={"bpm11X","bpm12X","bpm16X","bpm1X","bpm4aX","bpm4eX"};
   //TString bpm[6]={"bpm11Y","bpm12Y","bpm16Y","bpm1Y","bpm4aY","bpm4eY"};
 
-  TCut rampcut[8] = {"ch_cleandata==1 && ch_scandata1==0 && bcm_dg_ds>4 && Entry$>7e3 && Entry$<7.1e3","ch_cleandata==1 && ch_scandata1==1 && bcm_dg_ds>4 && Entry$>18e3 && Entry$<18.1e3","ch_cleandata==1 && ch_scandata1==2 && bcm_dg_ds>4 && Entry$>28e3 && Entry$<28.1e3","ch_cleandata==1 && ch_scandata1==3 && bcm_dg_ds>4 && Entry$>38e3 && Entry$<38.1e3","ch_cleandata==1 && ch_scandata1==4 && bcm_dg_ds>4 && Entry$>47e3 && Entry$<47.1e3","ch_cleandata==1 && ch_scandata1==5 && bcm_dg_ds>4 && Entry$>56e3 && Entry$<56.1e3","ch_cleandata==1 && ch_scandata1==6 && bcm_dg_ds>4 && Entry$>67e3 && Entry$<67.1e3","ch_cleandata==1 && ch_scandata1==7 && bcm_dg_ds>4 && Entry$>78e3 && Entry$<78.04e3"};
+  TCut rampcut[8] = {"ch_cleandata==1 && ch_scandata1==0 && bcm_dg_ds>4 && Entry$>7e3 && Entry$<7.1e3","ch_cleandata==1 && ch_scandata1==1 && bcm_dg_ds>4 && Entry$>18e3 && Entry$<18.1e3","ch_cleandata==1 && ch_scandata1==2 && bcm_dg_ds>4 && Entry$>28e3 && Entry$<28.1e3","ch_cleandata==1 && ch_scandata1==3 && bcm_dg_ds>4 && Entry$>38e3 && Entry$<38.1e3","ch_cleandata==1 && ch_scandata1==4 && bcm_dg_ds>4 && Entry$>47e3 && Entry$<47.1e3","ch_cleandata==1 && ch_scandata1==5 && bcm_dg_ds>4 && Entry$>56e3 && Entry$<56.1e3","ch_cleandata==1 && ch_scandata1==6 && bcm_dg_ds>4 && Entry$>67e3 && Entry$<67.1e3","ch_cleandata==1 && ch_scandata1==7 && bcm_dg_ds>4 && Entry$>76e3 && Entry$<76.6e3"};
 
   int num_magnet = (sizeof(magnet)/sizeof(*magnet));
   int num_bpm = (sizeof(bpm)/sizeof(*bpm));
@@ -51,7 +51,7 @@
 
       if (magnet[i]=="sl20_rf_vernier"){
         fitFunc->SetParameter(0, 3);  // Amplitude guess
-        fitFunc->SetParameter(1, 1.55);    // Angular frequency guess (2π*f)
+        fitFunc->SetParameter(1, 0.399);    // Angular frequency guess (2π*f)
         fitFunc->SetParameter(2, 0.0);    // Phase guess
         fitFunc->SetParameter(3, -256);    // Offset guess
       }
